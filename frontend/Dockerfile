@@ -25,6 +25,17 @@ RUN mkdir -p $ANDROID_HOME && \
 # Add Android SDK to PATH
 ENV PATH $PATH:$ANDROID_HOME/tools/bin
 
+# Set working directory (added)
+WORKDIR /app/frontend
+
+# Copy package.json and package-lock.json (added)
+COPY package*.json ./
+
+# Install npm dependencies (added)
+RUN npm install
+
+
+
 # Copy application code
 COPY . /app/frontend
 WORKDIR /app/frontend
