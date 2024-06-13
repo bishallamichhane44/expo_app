@@ -1,4 +1,4 @@
-docker-compose build
-docker-compose up
-npx expo start                                
-npm install
+C:\expo_app\frontend>npm install
+C:\expo_app>docker-compose build
+C:\expo_app>docker-compose up
+C:\expo_app\frontend>npx expo start                                
